@@ -1,0 +1,214 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: lightgreen;
+    display: grid;
+    grid-template:
+        "aboutMe" auto
+        "myWork" auto
+        "footer" auto
+        / 1fr;
+}
+
+/* About Me */
+
+.aboutMe {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.aboutMeContent {
+    display: flex;
+    align-items: center;
+}
+
+.aboutMeImageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: white;
+}
+
+.aboutMeImage {
+    object-fit: cover;
+    height: 450px;
+    width: 450px;
+}
+
+.aboutMeImageText {
+    position: absolute;
+    font-size: 3.25rem;
+}
+
+.aboutMeText {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 400px;
+    padding: 2rem;
+    padding-left: 1rem;
+    gap: 1.5rem;
+}
+
+.aboutMeText > h1 {
+    font-size: 2rem;
+}
+
+.aboutMeText > p {
+    color: rgb(78, 78, 78);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.socialButtonsContainer {
+    display: flex;
+    align-self: end;
+    padding-top: 1.25rem;
+    gap: 1rem;
+}
+
+.socialButtons {
+    width: 1.5rem;
+}
+
+/* My Work */
+
+.myWork {
+    background-color: lightpink;
+    padding: 5rem;
+}
+
+.workCardContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.workCardContainer > h1 {
+    grid-column: 1 / 4;
+    font-size: 2rem;
+    margin-bottom: -1rem;
+}
+
+.workCard {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    height: auto;
+}
+
+.workScreenshot {
+    background-color: lightsteelblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    max-height: 200px;
+    font-size: 2rem;
+    padding: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.workScreenshot > h1 {
+    max-width: 150px;
+}
+
+.workContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 125px;
+}
+
+.workTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+.workLinks {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.workSubtitle {
+    color: rgb(78, 78, 78);
+}
+
+/* Footer */
+
+.footer {
+    background-color: lightgoldenrodyellow;
+    padding: 3rem;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+}
+
+.footerText {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 1.5rem;
+}
+
+.footerText > h1 {
+    font-size: 2rem;
+    margin-bottom: -0.5rem;
+}
+
+.footerText > p,
+.footerText > address {
+    font-size: 1.125rem;
+    max-width: 275px;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 3rem;
+}
+
+.contactButton {
+    width: 1.25rem;
+}
+
+.contactText {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contactText > h1 {
+    font-size: 1.125rem;
+}
+
+.footerText > .socialButtonsContainer {
+    align-self: baseline;
+    margin-top: -1rem;
+}
+
+.footerText > .socialButtonsContainer > .socialButtons {
+    width: 2rem;
+}
