@@ -37,8 +37,8 @@ body {
 
 .aboutMeImage {
     object-fit: cover;
-    height: 450px;
-    width: 450px;
+    height: 425px;
+    width: 425px;
     box-shadow: 0px 2px 10px rgb(131, 131, 131);
     z-index: 2;
 }
@@ -47,6 +47,7 @@ body {
     position: absolute;
     font-size: 3.25rem;
     z-index: 3;
+    text-shadow: -2px 2px 3px rgba(82, 82, 82, 0.445);
 }
 
 .aboutMeText {
@@ -65,7 +66,7 @@ body {
     font-size: 2rem;
 }
 
-.aboutMeText > p {
+.aboutMeParagraph {
     color: rgb(78, 78, 78);
     font-size: 1rem;
     line-height: 1.5;
@@ -76,6 +77,10 @@ body {
     align-self: end;
     padding-top: 1.25rem;
     gap: 1rem;
+}
+
+.socialButtonsBig {
+    width: 1.75rem;
 }
 
 .socialButtons {
@@ -219,4 +224,273 @@ body {
 
 .footerContent > img {
     object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 440px) {
+    /* About Me */
+
+    .aboutMe {
+        padding: 0;
+    }
+
+    .aboutMeContent {
+        margin-bottom: 150px;
+        padding: 3rem;
+        display: block;
+    }
+
+    .aboutMeImageContainer {
+        justify-content: start;
+        align-items: end;
+        position: absolute;
+        transform: translate(-30px, 55px);
+        z-index: 1;
+    }
+
+    .aboutMeImage {
+        width: 400px;
+        height: 450px;
+    }
+
+    .aboutMeImageText {
+        transform: translate(345px, 20px);
+        font-size: 3.75rem;
+        text-wrap: nowrap;
+    }
+
+    .aboutMeText {
+        transform: translateY(160px);
+        padding-top: 90px;
+        padding-left: 45px;
+        width: 620px;
+    }
+
+    .aboutMeText > h1 {
+        font-size: 2.5rem;
+        align-self: end;
+        margin-right: 65px;
+    }
+
+    .aboutMeParagraph {
+        font-size: 1.4rem;
+    }
+
+    .imageSpacer {
+        background-color: white;
+        float: left;
+        width: 345px;
+        height: 170px;
+    }
+
+    .socialButtonsBig {
+        width: 2rem;
+    }
+
+    /* My Work */
+
+    .workCardContainer > h1 {
+        font-size: 2.5rem;
+    }
+
+    .workCardContainer {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .workCardContainer > h1 {
+        grid-column: 1 / 3;
+    }
+
+    .workCard {
+        max-width: 325px;
+    }
+
+    .workTitle {
+        font-size: 1.5rem;
+    }
+
+    .workSubtitle {
+        font-size: 1.25rem;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footerImage {
+        width: 350px;
+        height: 425px;
+    }
+
+    .footerText > h1 {
+        font-size: 2.5rem;
+    }
+
+    .footerText > p,
+    .footerText > address {
+        font-size: 1.4rem;
+        max-width: 325px;
+    }
+
+    .contactText > h1 {
+        font-size: 1.4rem;
+    }
+
+    .footerContent {
+        align-items: center;
+    }
+
+    .footerText > .socialButtonsContainer > .socialButtonsBig {
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    /* About Me */
+    .aboutMe {
+        background-image: -webkit-linear-gradient(277deg, #0891b2 41%, rgb(201, 201, 201) 41.1%, #ffffff 41.9%);
+    }
+
+    .aboutMeContent {
+        flex-direction: column;
+    }
+
+    .aboutMeImageContainer {
+        justify-content: end;
+        flex-wrap: wrap;
+    }
+
+    .aboutMeImageText {
+        position: absolute;
+        font-size: 5rem;
+        padding-left: 3.55rem;
+    }
+
+    .aboutMeImage {
+        width: 350px;
+        height: 475px;
+    }
+
+    .aboutMeText {
+        width: 100%;
+        padding: 0;
+        padding-top: 2rem;
+        box-shadow: none;
+        align-items: center;
+    }
+
+    .aboutMeText > h1 {
+        font-size: 3rem;
+    }
+
+    .aboutMeParagraph {
+        font-size: 1.5rem;
+    }
+
+    .socialButtonsContainer {
+        align-self: center;
+    }
+
+    .socialButtonsBig {
+        width: 2.5rem;
+    }
+
+    /* My Work */
+    .myWork {
+        padding: 0;
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+    }
+
+    .workCardContainer {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(7, auto);
+    }
+
+    .workCardContainer > h1 {
+        grid-column: 1 / 2;
+        font-size: 3rem;
+        justify-self: center;
+        padding-bottom: 1rem;
+    }
+
+    .workCard {
+        max-width: 400px;
+    }
+
+    .workScreenshot {
+        font-size: 3.5rem;
+    }
+
+    .workScreenshot > h1 {
+        max-width: 250px;
+    }
+
+    .workTitle {
+        font-size: 1.75rem;
+    }
+
+    .workSubtitle {
+        font-size: 1.25rem;
+    }
+
+    .socialButtons {
+        width: 2rem;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 0;
+        padding-top: 2rem;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerImage {
+        width: 100%;
+        height: 600px;
+    }
+
+    .footerText > h1,
+    .footerText > p,
+    .footerText > address,
+    .contactContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .footerText > h1 {
+        font-size: 3rem;
+        align-self: center;
+    }
+
+    .footerText > p {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .footerText > address {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .contactText > h1 {
+        font-size: 1.25rem;
+    }
+
+    .footerText > .socialButtonsContainer {
+        align-self: center;
+        padding-bottom: 5rem;
+    }
+
+    .footerText > .socialButtonsContainer > .socialButtonsBig {
+        width: 3rem;
+    }
 }
